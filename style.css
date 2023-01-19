@@ -58,6 +58,7 @@ button {
 }
 
 .color-column span {
+    cursor: pointer;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -73,10 +74,38 @@ button {
     width: 99%;
 }
 
+
+.copied-text {
+    position: absolute;
+    bottom: 60px;
+    width: 100%;
+    text-align: center;
+    background: white;
+    padding: 20px 0;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    animation-duration: 2s;
+    opacity: 0;
+}
+
 button:hover {
     background: rgb(236, 236, 236);
 }
 
 button:active {
     opacity: .7;
+}
+
+@keyframes copy-text {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
