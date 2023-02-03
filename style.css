@@ -15,6 +15,7 @@ form {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 1rem;
 }
 
 input,
@@ -28,6 +29,7 @@ button {
 }
 
 form input[type='color'] {
+    height: 55px;
     width: 90px;
     border: none;
     padding: none;
@@ -44,11 +46,13 @@ button {
     width: 200px;
     font-size: 1.2rem;
     border: 1px solid gray;
+    margin-left: 5px;
 }
 
 
 #color-container {
-    height: 500px;
+    margin-top: 1.5rem;
+    height: 85vh;
     display: flex;
 }
 
@@ -95,6 +99,62 @@ button:hover {
 button:active {
     opacity: .7;
 }
+
+
+
+@media screen and (max-width:590px) {
+    form {
+        flex-wrap: wrap;
+    }
+
+    form input[type='color'],
+    form select,
+    form option {
+        margin: 0;
+        width: 50%;
+    }
+
+    form button {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:450px) {
+
+    form input[type='color'] {
+        width: 20%;
+    }
+
+    form select {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    .color-column .hex {
+        font-size: .8rem;
+        height: 30px;
+    }
+
+    .copied-text {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 435px) {
+    .color-column .hex {
+        font-size: .6rem;
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .copied-text {
+        font-size: .6rem;
+        padding: 10px 0;
+    }
+}
+
 
 @keyframes copy-text {
     0% {
